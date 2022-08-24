@@ -40,7 +40,7 @@ header {
     color: rgb(202, 57, 57);
 }
 section {
-    padding:150px 100px 100px;
+    padding:150px 0 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +80,6 @@ ul {
     font-weight: 100;
 }
 footer {
-   padding: 0 200px;
    display: flex;
    align-items: center;
    flex-direction: column;
@@ -123,6 +122,72 @@ i {
     cursor: pointer;
     transition: 0.3s ease-in;
 }
-i:hover {
+i:not(i.bars):hover {
   transform: scale(1.5);  
+}
+.bars {
+    display: none;
+    font-size: 26px;
+}
+.header-container {
+    position: relative;
+}
+.res {
+    display: none;
+}
+@media (max-width:768px) {
+    .countdown div:nth-of-type(1),.countdown div:nth-of-type(2),.countdown div:nth-of-type(3),.countdown div:nth-of-type(4){
+        font-size: 32px;
+    }
+    .countdown {
+        font-size: 54px;
+    }
+    header {
+        padding: 0 40px;
+    }
+    .res {
+        position: absolute;
+        top: 30px;
+        right: 19px;
+        display: flex !important;
+        flex-direction: column;
+        background: rgb(84 84 255 / 38%);
+        padding: 40px 80px;
+        justify-content: center;
+        text-align: center;
+    }
+    .links {
+        display: none;
+        width: 300px;
+    }
+    .bars {
+        display: block;
+        color: white;
+    }
+}
+@media (max-width:576px) {
+    header {
+        padding: 0 20px;
+    }
+    .countdown div:nth-of-type(1),.countdown div:nth-of-type(2),.countdown div:nth-of-type(3),.countdown div:nth-of-type(4){
+        font-size: 16px;
+    }
+    .countdown {
+        font-size: 32px;
+    }
+    .text {
+        text-align: center;
+    }
+    
+    input {
+        width: 300px;
+    }
+    section {
+        padding-bottom: 50px;
+    }
+    .res {
+        padding: 40px 0;
+        width: 200px !important;
+
+    }
 }
